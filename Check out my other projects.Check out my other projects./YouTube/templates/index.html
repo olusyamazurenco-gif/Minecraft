@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>🔥 MyTube Clone</title>
+<link rel="stylesheet" href="/static/css/main.css">
+<link rel="stylesheet" href="/static/css/animations.css">
+</head>
+<body>
+<header>
+    <img src="/static/images/logo.png" class="logo" alt="MyTube Logo">
+    <input type="text" placeholder="Search videos..." id="searchBox">
+</header>
+
+<aside class="sidebar">
+    <ul>
+        <li>Home</li>
+        <li>Trending</li>
+        <li>Subscriptions</li>
+        <li>Library</li>
+    </ul>
+</aside>
+
+<main class="video-grid">
+    {% for video in videos %}
+    <div class="video-card">
+        <img src="/static/images/thumbnails/{{ video.split('.')[0] }}.jpg" alt="Thumbnail">
+        <h2>{{ video }}</h2>
+        <div class="buttons">
+            <button class="like">👍 Like</button>
+            <button class="dislike">👎 Dislike</button>
+            <button class="watch">▶ Watch</button>
+        </div>
+    </div>
+    {% endfor %}
+</main>
+
+<footer>
+    <p>© 2025 MyTube Clone</p>
+</footer>
+
+<script src="/static/js/main.js"></script>
+<script src="/static/js/modal.js"></script>
+<script src="/static/js/search.js"></script>
+</body>
+          </html>
+                                   
